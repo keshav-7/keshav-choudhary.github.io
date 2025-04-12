@@ -514,7 +514,7 @@
       
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>
+        <p style="margin-bottom: 0px;margin-top:25px">
           Let's connect on social sites for a quick chat about tech or anything.&nbsp;&nbsp;
           <a href="https://x.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-twitter-x"></i></a>&nbsp;&nbsp;
           <a href="https://facebook.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="facebook"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
@@ -523,6 +523,9 @@
           <a href="https://github.com/keshav-7/" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i></a>                  
         </p>
       </div>
+
+      <div id="response-view" class="response container" style="margin-bottom: 20px; text-align: center; display: none;">
+      </div>      
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -561,9 +564,8 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Your Name</label>
                   <input type="text" name="name" id="name-field" class="form-control" required="">
@@ -575,8 +577,8 @@
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <label for="title-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="title" id="title-field" required="">
                 </div>
 
                 <div class="col-md-12">
@@ -636,6 +638,70 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- commenting right now as this point is pending -->
+  <script src="configs.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const responseDiv = document.querySelector('#response-view');
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+        .then(function (response) {
+          console.log("EmailJS Success Response:", response);
+          var html = '';
+          html += '<span style="color:blue;"><strong>Thank you for your email.</strong></span>';
+          html += '<span style="color:blue;">I will get back to you shortly.</span>';
+          html += '<span style="color:blue;"> For a quicker response, please feel free to connect with me on the social platforms mentioned above.</span>';
+          responseDiv.innerHTML += html;    
+          responseDiv.style.display = 'block';      
+          document.getElementById("contact-form").reset();
+        }, function (error) {
+          console.error("EmailJS Error:", error);
+          var html = '';
+          html += '<span style="color:red;"><strong>Failed to send message.</strong></span>';
+          html += '<span style="color:red;"> For a quicker response, please feel free to connect with me on the social platforms mentioned above.</span>';
+          responseDiv.innerHTML += html;    
+          responseDiv.style.display = 'block';           
+        });
+    });
+
+
+    // document.getElementById("contact-form").addEventListener("submit", function(e) {
+    //   e.preventDefault();
+
+    //   const formData = new FormData(this);
+    //   const data = {
+    //     name: formData.get("name"),
+    //     email: formData.get("email"),
+    //     message: formData.get("message"),
+    //     title: formData.get("title")        
+    //   };
+    //   fetch("forms/contact.php", { // Adjust path if needed
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify(data)
+    //   })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     if (result.success) {
+    //       alert("Message sent successfully!");
+    //     } else {
+    //       alert("Failed to send message. " + (result.error || ""));
+    //     }
+    //   })
+    //   .catch(err => {
+    //     console.error("Error:", err);
+    //     alert("Something went wrong.");
+    //   });
+    // });    
+  </script>
+  
 
 </body>
 

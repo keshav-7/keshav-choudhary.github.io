@@ -1,42 +1,52 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Set headers for CORS and JSON
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+header("Access-Control-Allow-Methods: POST");
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'kumarkeshav2016@gmail.com';
+$data = json_decode(file_get_contents("php://input"));
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+if (!$data || !isset($data->name) || !isset($data->email) || !isset($data->message)) {
+    echo json_encode(["success" => false, "error" => "Invalid input"]);
+    exit;
+}
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+// Load credentials from environment or manually set them
+$service_id = getenv("EMAILJS_SERVICE_ID") ?: "your_service_id";
+$template_id = getenv("EMAILJS_TEMPLATE_ID") ?: "your_template_id";
+$public_key = getenv("EMAILJS_PUBLIC_KEY") ?: "your_public_key";
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+// Prepare request to EmailJS REST API
+$url = "https://api.emailjs.com/api/v1.0/email/send";
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+$payload = json_encode([
+    "service_id" => $service_id,
+    "template_id" => $template_id,
+    "user_id" => $public_key, // public_key
+    "template_params" => [
+        "name" => $data->name,
+        "email" => $data->email,
+        "message" => $data->message,
+        "title" => $data->message,
+    ]
+]);
 
-  echo $contact->send();
-?>
-z
+$headers = [
+    "Content-Type: application/json",
+    "Authorization: Bearer $private_key"
+];
+
+// Send POST request via curl
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if ($httpcode === 200) {
+    echo json_encode(["success" => true]);
+} else {
+    echo json_encode(["success" => false, "error" => $response]);
+}
