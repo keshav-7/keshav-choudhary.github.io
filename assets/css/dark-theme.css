@@ -1,0 +1,48 @@
+body.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  body.dark-theme .section,
+  body.dark-theme .skills .progress-bar,
+  body.dark-theme .resume-item,
+  body.dark-theme .info-wrap,
+  body.dark-theme .testimonial-item,
+  body.dark-theme .service-item,
+  body.dark-theme .stats-item,
+  body.dark-theme .portfolio-item,
+  body.dark-theme input,
+  body.dark-theme textarea,
+  body.dark-theme .progress-bar-wrap {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  body.dark-theme .progress-bar-wrap {
+    background-color: #444 !important;
+    border: 1px solid #666;
+  }
+  
+  body.dark-theme h1,
+  body.dark-theme h2,
+  body.dark-theme h3,
+  body.dark-theme h4,
+  body.dark-theme h5,
+  body.dark-theme h6,
+  body.dark-theme p,
+  body.dark-theme a,
+  body.dark-theme span,
+  body.dark-theme li,
+  body.dark-theme label,
+  body.dark-theme .navmenu ul li a {
+    color: #ffffff !important;
+  }
+  
+  body.dark-theme .navmenu ul li a:hover,
+  body.dark-theme .navmenu ul li a.active {
+    color: #00bcd4 !important;
+  }
+  
+  body.dark-theme .bi {
+    color: #ffffff !important;
+  }
