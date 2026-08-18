@@ -1,708 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Keshav Choudhary</title>
-  <meta name="description" content="DevOps Engineer & Full Stack Developer – Keshav Kumar Choudhary's personal portfolio showcasing projects, skills, experience, and contact details.">
-  <meta content="" name="keywords">
-  <meta property="og:title" content="Keshav Kumar Choudhary – Portfolio">
-  <meta property="og:description" content="DevOps Engineer & Full Stack Developer based in Gurgaon.">
-  <meta property="og:image" content="https://baisar.in/assets/img/my-profile-img.jpg">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Keshav Kumar Choudhary — Senior Platform Engineer</title>
+  <meta name="description" content="Senior Platform Engineer with five years of experience in cloud infrastructure, DevOps, distributed backend systems, and healthcare product delivery.">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="Keshav Kumar Choudhary — Senior Platform Engineer">
+  <meta property="og:description" content="Building reliable cloud platforms, scalable Go services, and high-velocity delivery systems.">
+  <meta property="og:image" content="https://baisar.in/assets/img/keshav-professional-portrait.png">
   <meta property="og:url" content="https://baisar.in">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/dark-theme.css" rel="stylesheet">
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <button class="btn btn-sm toggle-dark" onclick="document.body.classList.toggle('dark-theme')" style="position: absolute; top: 10px; right: 10px; z-index: 9999; background-color:black; color:white;">
-      <i class="bi bi-moon"></i>
-    </button>
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">Keshav</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://x.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://facebook.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://instagram.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://linkedin.com/in/keshav-er/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>      
-      <a href="https://github.com/keshav-7/" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#home" aria-label="Keshav Choudhary, home"><span>KC</span><strong>Keshav Choudhary</strong></a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#impact">Impact</a><a href="#expertise">Expertise</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav>
+    <div class="header-actions"><button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme"><i class="bi bi-moon-stars"></i></button><a class="button button-small" href="assets/pdf/Keshav_Kumar_Choudhary_Resume_2026.pdf" target="_blank">Résumé <i class="bi bi-arrow-up-right"></i></a><button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button></div>
   </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#impact">Impact</a><a href="#expertise">Expertise</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav>
 
-  <main class="main">
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Keshav Kumar Choudhary</h2>
-        <p>
-          I'm 
-          <span class="typed" data-typed-items="DevOps Engineer, Full-Stack Developer, Automation Enthusiast, Mentor"
-          >
-            Devops
-          </span>
-          <span class="typed-cursor typed-cursor--blink" aria-hidden="true">            
-          </span>
-          <span class="typed-cursor typed-cursor--blink" aria-hidden="true">            
-          </span>
-        </p>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> Senior Platform Engineer · Renesan Software Solutions</div>
+        <h1>I build platforms that<br><span>perform under pressure.</span></h1>
+        <p class="hero-lead">I’m Keshav—a platform engineer working across cloud architecture, DevOps, distributed backend systems, observability, and healthcare product delivery.</p>
+        <div class="hero-actions"><a class="button" href="#impact">See my impact <i class="bi bi-arrow-down-right"></i></a><a class="text-link" href="mailto:kumarkeshav2016@gmail.com">Let’s work together <i class="bi bi-arrow-right"></i></a></div>
+        <div class="proof-row" aria-label="Career highlights"><div><strong>5 years</strong><span>engineering experience</span></div><div><strong>18.4M+</strong><span>records replicated</span></div><div><strong>60%</strong><span>faster critical APIs</span></div></div>
       </div>
-
+      <div class="hero-visual reveal"><div class="portrait-frame"><img src="assets/img/keshav-professional-portrait.png" alt="Professional portrait of Keshav Kumar Choudhary" width="1023" height="1537"></div><div class="floating-card card-top"><i class="bi bi-cloud-check"></i><span><small>Cloud platforms</small>AWS · OCI · Serverless</span></div><div class="floating-card card-bottom"><span class="code-mark">{ }</span><span><small>Product engineering</small>Go · Python · React · Flutter</span></div></div>
     </section>
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>
-          Motivated and results-driven professional with 4+ years of experience as a Software Engineer, recently transitioned into the world of DevOps. I bring a solid foundation in software development and a strong understanding of end-to-end application lifecycles, which helps me bridge the gap between development and operations effectively.
-          <br><br>
-          Known for being a hard-working achiever, I’m committed to on-time delivery, clean code practices, and collaborative teamwork. My passion for automation, CI/CD, infrastructure as code, and system reliability led me to shift my career toward DevOps, where I now focus on optimizing workflows, improving deployment pipelines, and ensuring robust infrastructure.
-          <br><br>
-          Always eager to learn and adapt, I thrive in dynamic environments and enjoy contributing to high-impact projects that drive innovation and efficiency.
-          </p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Devops Engineer &amp; Full Stack Developer</h2>
-            <br >
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+9183 4057 5235</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Gurgaon, Haryana, India</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>https://baisar.in</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>24th Nov 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Graduate</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>kumarkeshav2016@gmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+    <section class="marquee" aria-label="Core technologies"><div>GO <span>✦</span> PYTHON <span>✦</span> AWS <span>✦</span> OCI <span>✦</span> TERRAFORM <span>✦</span> DOCKER <span>✦</span> KAFKA <span>✦</span> MYSQL <span>✦</span> OPENTELEMETRY</div></section>
+
+    <section class="section about" id="about">
+      <div class="section-kicker reveal">01 / About</div>
+      <div class="about-grid"><h2 class="reveal">Product instincts.<br><span>Platform mindset.</span></h2><div class="about-copy reveal"><p class="large-copy">I build scalable services, reliable delivery systems, and production platforms—connecting product engineering with the cloud infrastructure that powers it.</p><p>My journey spans hands-on backend development, team leadership, DevOps, cloud migration, observability, and end-to-end healthcare product delivery. I care about measurable outcomes: faster APIs, dependable releases, resilient high-traffic systems, and automation that gives engineering teams more time to create.</p><div class="detail-grid"><div><small>Based in</small><strong>Gurugram, India</strong></div><div><small>Experience</small><strong>5 years</strong></div><div><small>Industry</small><strong>Healthcare technology</strong></div><div><small>Focus</small><strong>Platform · Cloud · AI</strong></div></div></div></div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="section-heading reveal"><div><span class="section-kicker">02 / Experience</span><h2>From application code<br>to platform ownership.</h2></div><a class="text-link" href="assets/pdf/Keshav_Kumar_Choudhary_Resume_2026.pdf" target="_blank">View full résumé <i class="bi bi-arrow-up-right"></i></a></div>
+      <article class="experience-profile reveal">
+        <div class="experience-overview"><div><span class="experience-badge">5 years of experience</span><h3>Senior Platform Engineer</h3><p>Renesan Software Solutions · Previously Healthians</p></div><div class="career-path" aria-label="Career progression"><span>Software Engineering</span><i class="bi bi-arrow-right"></i><span>Backend Systems</span><i class="bi bi-arrow-right"></i><span>DevOps</span><i class="bi bi-arrow-right"></i><span>Platform Ownership</span></div></div>
+        <p class="experience-lead">I’ve grown from building application features and APIs to owning cloud platforms, production delivery, observability, and complete healthcare products. That end-to-end journey lets me solve infrastructure problems with a developer’s perspective and product challenges with an operations mindset.</p>
+        <div class="experience-columns">
+          <section><i class="bi bi-cloud"></i><h4>Platform &amp; Cloud</h4><ul><li>Own cloud architecture, secure containerized environments, CI/CD, and production observability.</li><li>Evaluated AWS-to-OCI migration across compute, networking, IAM, storage, databases, serverless, rollback, and cost readiness.</li><li>Implemented Datadog, OpenTelemetry, Grafana, SigNoz, and CloudWatch.</li></ul></section>
+          <section><i class="bi bi-diagram-3"></i><h4>Backend &amp; Data</h4><ul><li>Build scalable Go and Python services, asynchronous workers, APIs, and event-driven workflows.</li><li>Created a durable Go/MySQL replication and CDC platform processing more than 18.4 million records.</li><li>Integrated MySQL, PostgreSQL, Redis, S3, SQS, Lambda, Kafka, and OCI HeatWave.</li></ul></section>
+          <section><i class="bi bi-window-stack"></i><h4>Product Engineering</h4><ul><li>Deliver Go APIs, React CRM and web experiences, Flutter mobile applications, and AI-enabled workflows.</li><li>Modernized a critical CRM from PHP 7.1 and CodeIgniter 2 to PHP 8.2 and CodeIgniter 4.</li><li>Built internal APIs, database schemas, file-processing workflows, and operational tools.</li></ul></section>
+          <section><i class="bi bi-people"></i><h4>Reliability &amp; Leadership</h4><ul><li>Delivered a concurrency-safe slot service with 60% faster responses and zero peak-campaign downtime.</li><li>Improved Docker delivery pipelines with Jenkins and GitHub Actions by approximately 40%.</li><li>Mentor engineers, review code, plan sprints, and partner with stakeholders on delivery.</li></ul></section>
         </div>
-
-      </div>
-
+        <div class="experience-results" aria-label="Experience results"><div><strong>18.4M+</strong><span>records processed</span></div><div><strong>60%</strong><span>faster critical APIs</span></div><div><strong>40%</strong><span>faster deployments</span></div><div><strong>Zero</strong><span>peak-time downtime</span></div></div>
+      </article>
     </section>
-    <section id="stats" class="stats section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong></p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong></p>
-            </div>
-          </div>
+
+    <section class="section impact" id="impact">
+      <div class="section-kicker reveal">03 / Selected platform impact</div>
+      <div class="impact-heading reveal"><h2>Systems built for<br>real-world scale.</h2><p>Representative initiatives combining architecture, implementation, reliability, and measurable business impact.</p></div>
+      <div class="impact-grid">
+        <article class="impact-card reveal"><div class="impact-number">18.4M+</div><h3>MySQL Replication & CDC</h3><p>Multi-source full load and change data capture with durable checkpoints, schema compatibility, and handling for binlog, DDL, GTID, generated columns, ENUMs, and zero dates.</p><div class="tags tags-dark"><em>Go</em><em>MySQL</em><em>Docker</em><em>Jenkins</em></div></article>
+        <article class="impact-card reveal"><div class="impact-number">60% faster</div><h3>Slot Microservice</h3><p>Concurrency-safe availability, freeze, validation, and booking operations that maintained zero downtime during peak booking campaigns.</p><div class="tags tags-dark"><em>Go</em><em>Gin</em><em>MySQL</em><em>Docker</em></div></article>
+        <article class="impact-card reveal"><div class="impact-number">Cross-cloud</div><h3>AWS-to-OCI Migration</h3><p>Validated service mappings, target architecture, IAM, networking, HeatWave data copy, Functions, API Gateway, observability, rollback, and cost readiness.</p><div class="tags tags-dark"><em>AWS</em><em>OCI</em><em>HeatWave</em><em>Functions</em></div></article>
+      </div>
+    </section>
+
+    <section class="section expertise" id="expertise">
+      <div class="section-kicker reveal">04 / Expertise</div><div class="expertise-intro reveal"><h2>A broad platform toolkit.</h2><p>Deepest at the intersection of backend systems, cloud infrastructure, delivery automation, and production reliability.</p></div>
+      <div class="expertise-grid">
+        <article class="expertise-card reveal"><span>01</span><i class="bi bi-cloud"></i><h3>Cloud Architecture</h3><p>AWS, Oracle Cloud Infrastructure, networking, IAM, serverless architecture, migration planning, and cost readiness.</p><div class="tags"><em>AWS</em><em>OCI</em><em>IAM</em><em>Serverless</em></div></article>
+        <article class="expertise-card reveal"><span>02</span><i class="bi bi-infinity"></i><h3>Platform Engineering</h3><p>Secure delivery systems, infrastructure automation, containerized environments, Linux operations, and reliable release workflows.</p><div class="tags"><em>Docker</em><em>Terraform</em><em>Ansible</em><em>CI/CD</em><em>Linux</em></div></article>
+        <article class="expertise-card reveal"><span>03</span><i class="bi bi-diagram-3"></i><h3>Backend & Distributed Systems</h3><p>Scalable services, asynchronous processing, event-driven architecture, APIs, and concurrency-safe systems.</p><div class="tags"><em>Go</em><em>Python</em><em>Microservices</em><em>Kafka</em><em>SQS</em></div></article>
+        <article class="expertise-card reveal"><span>04</span><i class="bi bi-activity"></i><h3>Data & Observability</h3><p>Database performance, replication, CDC, caching, traces, metrics, dashboards, and production visibility.</p><div class="tags"><em>MySQL</em><em>PostgreSQL</em><em>Redis</em><em>Datadog</em><em>OpenTelemetry</em><em>Grafana</em></div></article>
+        <article class="expertise-card reveal"><span>05</span><i class="bi bi-window-stack"></i><h3>Product Engineering</h3><p>Full-stack and mobile product delivery across healthcare CRM, web experiences, mobile applications, and internal tools.</p><div class="tags"><em>React</em><em>Flutter</em><em>PHP</em><em>Laravel</em><em>CodeIgniter</em></div></article>
+        <article class="expertise-card reveal"><span>06</span><i class="bi bi-stars"></i><h3>AI & Leadership</h3><p>Agentic workflows, GenAI-assisted operations, technical mentoring, code review, sprint planning, and stakeholder delivery.</p><div class="tags"><em>GenAI</em><em>Agents</em><em>Mentoring</em><em>Leadership</em></div></article>
+      </div>
+    </section>
+
+    <section class="section credentials" id="credentials">
+      <div class="section-kicker reveal">05 / Credentials</div><div class="credentials-grid">
+        <article class="credential-feature reveal"><small>Education · 2017–2020</small><h2>Bachelor of Computer Applications</h2><p>Maulana Abul Kalam Azad University of Technology (formerly WBUT) · Dinabandhu Andrews Institute of Technology &amp; Management</p><strong>71%</strong><div class="campus-note"><small>Beyond academics</small><p>All-rounder for the DAITM BCA cricket team; Fair Play Award in 2019, tournament runner-up and a hat-trick in 2020.</p></div></article>
+        <div class="credential-list reveal"><h3>Licenses &amp; certifications</h3><div><i class="bi bi-patch-check"></i><span><small>HackerRank</small><strong>Go (Basic)</strong></span></div><div><i class="bi bi-patch-check"></i><span><small>HackerRank · May 2024 · EBB44210E306</small><strong>Software Engineer Certificate</strong></span></div><div><i class="bi bi-patch-check"></i><span><small>NSICLTD · Jul 2019 · 171131</small><strong>PHP</strong></span></div><div><i class="bi bi-patch-check"></i><span><small>HCL GUVI</small><strong>Python</strong></span></div><div><i class="bi bi-patch-check"></i><span><small>LinkedIn Learning · Jun 2020 · 5GQ 8PR FNG</small><strong>Become a PHP Developer</strong></span></div></div>
+      </div>
+      <div class="credential-highlights reveal"><div><i class="bi bi-award"></i><span><small>Honor · Healthians · Sep 2022</small><strong>Rising Star Award</strong></span></div><div><i class="bi bi-translate"></i><span><small>Languages</small><strong>Maithili · Hindi · English · Bengali</strong></span></div></div>
+      <div class="recommendations-heading reveal"><span class="section-kicker">LinkedIn recommendations</span><h2>Trusted by engineering leaders.</h2></div>
+      <div class="recommendations-slider reveal" id="recommendations-slider" aria-roledescription="carousel" aria-label="LinkedIn recommendations">
+        <div class="recommendations-track">
+          <blockquote class="recommendation recommendation-slide is-active" aria-hidden="false"><i class="bi bi-quote"></i><p>“Keshav played a key role in designing and implementing scalable systems, especially during high-traffic situations where performance and reliability were critical.”</p><footer><strong>Rishabh Jain</strong><span>SVP, Technology · Healthians · IIT Delhi Alumnus</span></footer></blockquote>
+          <blockquote class="recommendation recommendation-slide" aria-hidden="true"><i class="bi bi-quote"></i><p>“Keshav has a strong grasp of technical concepts and a natural ability to quickly understand complex requirements. He handled multiple challenging projects end-to-end.”</p><footer><strong>Dewashish Anand</strong><span>Founding Member · UNBLOC</span></footer></blockquote>
         </div>
+        <div class="slider-controls"><div class="slider-dots" aria-label="Choose recommendation"><button class="slider-dot is-active" data-slide="0" aria-label="Show recommendation 1" aria-current="true"></button><button class="slider-dot" data-slide="1" aria-label="Show recommendation 2"></button></div><div class="slider-arrows"><button class="slider-arrow slider-prev" aria-label="Previous recommendation"><i class="bi bi-arrow-left"></i></button><button class="slider-arrow slider-next" aria-label="Next recommendation"><i class="bi bi-arrow-right"></i></button></div></div>
       </div>
     </section>
-    <section id="skills" class="skills section light-background">
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-      </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Aws</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Go</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>MySQL</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Problem Solving</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="resume" class="resume section">
-
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume <p>
-          <a href="assets/pdf/keshav_kumar_choudhary.pdf" target="_blank" download class="btn btn-primary mt-3">
-            <i class="bi bi-download"></i> Download Resume
-          </a>
-        </p></h2>
-        <p>Experienced software engineer with a passion for crafting elegant solutions to complex problems. Proficient in a
-          diverse range of programming languages and technologies, I thrive on innovation and continuous learning.
-          Adept at collaborating with cross-functional teams to deliver high-impact software solutions. Committed to
-          code quality, scalability, and user-centric design. Ready to tackle the next exciting challenge in the world of
-          technology.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Keshav Kumar Choudhary</h4>
-              <p><em>Innovative and deadline-driven Software Engineer with 4+ years of experience in software development, creating scalable solutions and high-quality digital experiences.
-              </em></p>
-              <ul>
-                <li>Gurgaon, India</li>
-                <li>+91 83405 75235</li>
-                <li>kumarkeshav2016@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor's Degree in Computer Application</h4>
-              <h5>2017 - 2020</h5>
-              <p><em>Dinabandhu Andrews Institute of Technology and Management, Kolkata</em></p>
-            </div>
-            
-
-            <div class="resume-item">
-              <h4>Higher Secondry</h4>
-              <h5>2014 - 2016</h5>
-              <p><em>J N College, Madhubani</em></p>          
-            </div> 
-            
-            <div class="resume-item">
-              <h4>Secondry</h4>
-              <h5>2013 - 2014</h5>
-              <p><em>R C M H S Raiyam Factory, Darbhanga</em></p>          
-            </div>             
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Devops Engineer</h4>
-              <h5>2025 - Present</h5>
-              <p><em>Healthians, Gurgaon, India</em></p>
-              <ul>
-                <li>Automated key processes to streamline development workflows and reduce manual effort. Contributed to CI/CD pipeline improvements, leading to faster and more reliable releases.</li>
-                <li>Transitioned into a DevOps Engineer role, actively learning and executing responsibilities effectively. Focused on building scalable, reliable systems while ensuring smooth deployments and infrastructure management.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Software Development Engineer II</h4>
-              <h5>2021 - 2025</h5>
-              <p><em>Healthians,  Gurgaon, India </em></p>
-              <ul>
-                <li>Led and mentored a team of 6 members, resulting in a 35% increase in team productivity.</li>
-                <li>Optimized system performance and scalability, boosting application response time by 40% and throughput by 25% through architectural and code improvements.</li>
-                <li>Built scalable microservices in Go and AWS Lambda functions for serverless tasks. Developed Go-based background workers, improving task processing efficiency by 60%.</li>
-                <li>Upgraded the existing project version, cutting deployment-related bugs by 50%.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="services" class="services section">
-
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>
-          I'm a passionate tech professional with hands-on experience across multiple domains, including web development and DevOps. I’ve worked with various tech stacks—building scalable microservices with Go, developing full-stack applications, and automating infrastructure as a DevOps Engineer.
-          <br><br>
-          In my sessions, I focus on practical learning, sharing real-world challenges, problem-solving strategies, and growth-oriented mindsets. I help developers not just learn to code, but to build careers—covering topics like resume building, role transitions, interview preparation, and continuous skill development.
-          <br><br>
-          Whether you're just starting out or looking to level up in your tech journey, I aim to provide insightful, actionable guidance from both a developer’s and mentor’s perspective.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-person-badge-fill"></i></div>
-            <div>
-              <h4 class="title">Experienced Tech Professional</h4>
-              <p class="description">Hands-on experience in web development and DevOps, with a strong command over multiple tech stacks and real-world projects.</p>
-            </div>
-          </div>
-        
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
-            <div>
-              <h4 class="title">Full-Stack & Backend Expertise</h4>
-              <p class="description">Built scalable microservices using Go, developed full-stack applications, and worked on performance optimization and system architecture.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-gear-fill"></i></div>
-            <div>
-              <h4 class="title">DevOps & Automation Focus</h4>
-              <p class="description">Transitioned into a DevOps role, automating infrastructure, improving CI/CD pipelines, and streamlining deployment processes.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-lightbulb-fill"></i></div>
-            <div>
-              <h4 class="title">Practical, Experience-Based Teaching</h4>
-              <p class="description">I teach by sharing real-world challenges and solutions, helping learners understand how things work in actual production environments.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-graph-up-arrow"></i></div>
-            <div>
-              <h4 class="title">Career Growth & Development Mentor></h4>
-              <p class="description">Guide learners in building strong careers through resume tips, interview strategies, role transitions, and continuous learning.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-people-fill"></i></div>
-            <div>
-              <h4 class="title">Developer-Centric Approach</h4>
-              <p class="description">My sessions are tailored to support developers at all levels—whether you’re just starting or aiming to grow—offering actionable insights and growth strategies.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <section id="testimonials" class="testimonials section light-background">
-
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>How My Colleagues See Me: A Blend of Reliability, Leadership, and Innovation</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">          
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>I’ve worked with many talented engineers, but Keshav stands out for their rare combination of technical depth and execution speed. Their grasp on both development and DevOps is exceptional, and they have the mindset of a true problem-solver.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Rishabh Jain</h3>
-                <h4>CTO & IIT Alumnus</h4>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>What sets Keshav apart is their ability to own challenges, deliver consistently, and elevate the team around them. They’re a natural leader with deep technical and people skills.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Dewashish Anand</h3>
-                <h4>SVP Technology</h4>
-              </div>
-            </div>            
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Working with Keshav always gives me confidence that our backend will be rock-solid. They not only build scalable APIs but also take time to ensure seamless frontend-backend integration. A true team player!</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Satish Kumar</h3>
-                <h4>Frontend Developer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>I’ve learned more in a few months under Keshav's guidance than I did in a year on my own. They simplify complex topics and always push me to think deeper. An incredible mentor!</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Junior Developer - Mentee</h3>
-                <h4>Pragya Nainwal</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Keshav is the bridge between planning and execution. Whether it's implementing critical features or resolving blockers, they’re always one step ahead with a solution-focused mindset.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Dipanshu Gupta</h3>
-                <h4>Senior Product Manager</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>From automating deployments to optimizing pipelines, Keshav brings clarity and innovation to everything DevOps. Their ability to simplify and scale systems has saved us countless hours.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Shweta Aggrawal</h3>
-                <h4>Principal Architect - infra</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Working with Keshav makes testing easier—code is clean, well-documented, and bugs are rare. They always collaborate with us to ensure the product is rock solid before it ships.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <h3>Ravinder Malik</h3>
-                <h4>Lead QA Engineer</h4>
-              </div>
-            </div>            
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section>
-    <section id="contact" class="contact section">
-
-      
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p style="margin-bottom: 0px;margin-top:25px">
-          Let's connect on social sites for a quick chat about tech or anything.&nbsp;&nbsp;
-          <a href="https://x.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-twitter-x"></i></a>&nbsp;&nbsp;
-          <a href="https://facebook.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="facebook"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
-          <a href="https://instagram.com/whonatwarlal" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
-          <a href="https://linkedin.com/in/keshav-er/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>&nbsp;&nbsp;
-          <a href="https://github.com/keshav-7/" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i></a>                  
-        </p>
-      </div>
-
-      <div id="response-view" class="response container" style="margin-bottom: 20px; text-align: center; display: none;">
-      </div>      
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Present - Gurgaon, India</p>
-                  <p>Permanent - Phulkahi, Raiyam, Darbhanga</p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call</h3>
-                  <p>+91 834057 5235</p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>kumarkeshav2016@gmail.com</p>
-                </div>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3577.136272684508!2d85.9905840757626!3d26.289681977023992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDE3JzIyLjkiTiA4NcKwNTknMzUuNCJF!5e0!3m2!1sen!2sin!4v1744316883780!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="title-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="title" id="title-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
+    <section class="section contact" id="contact"><div class="contact-inner reveal"><div><span class="section-kicker">06 / Contact</span><h2>Have a platform challenge<br><span>worth solving?</span></h2><p>I’m open to conversations about platform engineering, DevOps, cloud architecture, healthcare technology, and engineering mentorship.</p><div class="contact-socials" aria-label="Social profiles"><a href="https://linkedin.com/in/keshav-er/" target="_blank" rel="noopener" aria-label="Connect with Keshav on LinkedIn"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a><a href="https://github.com/keshav-7/" target="_blank" rel="noopener" aria-label="View Keshav on GitHub"><i class="bi bi-github"></i><span>GitHub · keshav-7</span></a><a href="https://x.com/whonatwarlal" target="_blank" rel="noopener" aria-label="Follow whonatwarlal on X"><i class="bi bi-twitter-x"></i><span>X</span></a><a href="https://instagram.com/whonatwarlal" target="_blank" rel="noopener" aria-label="Follow whonatwarlal on Instagram"><i class="bi bi-instagram"></i><span>Instagram</span></a><a href="https://facebook.com/whonatwarlal" target="_blank" rel="noopener" aria-label="Connect with whonatwarlal on Facebook"><i class="bi bi-facebook"></i><span>Facebook</span></a></div></div><div class="contact-actions"><a class="button button-light" href="mailto:kumarkeshav2016@gmail.com">Start a conversation <i class="bi bi-arrow-up-right"></i></a><a href="tel:+918340575235">+91 83405 75235</a><a href="https://linkedin.com/in/keshav-er/" target="_blank" rel="noopener">Connect on LinkedIn <i class="bi bi-arrow-up-right"></i></a></div></div></section>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Keshav</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
+  <footer class="site-footer"><div><strong>Keshav Choudhary</strong><span>Senior Platform Engineer</span></div><div class="footer-socials"><a href="https://linkedin.com/in/keshav-er/" target="_blank" rel="noopener">LinkedIn <i class="bi bi-arrow-up-right"></i></a><a href="https://github.com/keshav-7/" target="_blank" rel="noopener">GitHub · keshav-7 <i class="bi bi-arrow-up-right"></i></a><a href="https://x.com/whonatwarlal" target="_blank" rel="noopener">X <i class="bi bi-arrow-up-right"></i></a><a href="https://instagram.com/whonatwarlal" target="_blank" rel="noopener">Instagram <i class="bi bi-arrow-up-right"></i></a><a href="https://facebook.com/whonatwarlal" target="_blank" rel="noopener">Facebook <i class="bi bi-arrow-up-right"></i></a></div><small>© <span id="year"></span> Keshav. Built with intention.</small></footer>
   <script src="assets/js/main.js"></script>
-  <!-- commenting right now as this point is pending -->
-  <script src="configs.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
-    })();
-
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const responseDiv = document.querySelector('#response-view');
-      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
-        .then(function (response) {
-          console.log("EmailJS Success Response:", response);
-          var html = '';
-          html += '<span style="color:blue;"><strong>Thank you for your email.</strong></span>';
-          html += '<span style="color:blue;"> I will get back to you shortly.</span>';
-          html += '<span style="color:blue;"> For a quicker response, please feel free to connect with me on the social platforms mentioned above.</span>';
-          responseDiv.innerHTML += html;    
-          responseDiv.style.display = 'block';      
-          document.getElementById("contact-form").reset();
-        }, function (error) {
-          console.error("EmailJS Error:", error);
-          var html = '';
-          html += '<span style="color:red;"><strong>Failed to send message.</strong></span>';
-          html += '<span style="color:red;"> For a quicker response, please feel free to connect with me on the social platforms mentioned above.</span>';
-          responseDiv.innerHTML += html;    
-          responseDiv.style.display = 'block';           
-        });
-    });
-
-
-    // document.getElementById("contact-form").addEventListener("submit", function(e) {
-    //   e.preventDefault();
-
-    //   const formData = new FormData(this);
-    //   const data = {
-    //     name: formData.get("name"),
-    //     email: formData.get("email"),
-    //     message: formData.get("message"),
-    //     title: formData.get("title")        
-    //   };
-    //   fetch("forms/contact.php", { // Adjust path if needed
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(data)
-    //   })
-    //   .then(res => res.json())
-    //   .then(result => {
-    //     if (result.success) {
-    //       alert("Message sent successfully!");
-    //     } else {
-    //       alert("Failed to send message. " + (result.error || ""));
-    //     }
-    //   })
-    //   .catch(err => {
-    //     console.error("Error:", err);
-    //     alert("Something went wrong.");
-    //   });
-    // });    
-  </script>
-  
-
 </body>
-
 </html>
